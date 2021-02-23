@@ -1,0 +1,16 @@
+@import "./../../../../styles/components/index";
+
+.tasks{
+    flex-grow: 1;
+
+    &__empty{
+        text-align: center;
+        font-size: 36px;
+        font-weight: 700;
+        margin-top: 70px;
+    }
+
+    &__inner{
+        margin-top: -30px;
+    }
+}

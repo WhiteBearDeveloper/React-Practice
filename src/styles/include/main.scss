@@ -1,0 +1,64 @@
+@import "./src/styles/components/index";
+
+#root{
+    min-height: inherit;
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    min-height: inherit;
+    font-size: 16px;
+    line-height: 1.2;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: $black;
+}
+.bold{
+    font-weight: 700;
+}
+
+h1{
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+}
+.form{
+    $formPaddingX: 15px;
+
+    &__row{
+        $marginX: -$formPaddingX;
+
+        margin-right: $marginX;
+        margin-left: $marginX;
+
+        &:not(:last-child){
+            margin-bottom: 15px;
+        }
+    }
+    &__item{
+        display: inline-block;
+        width: 100%;
+        padding-right: $formPaddingX;
+        padding-left: $formPaddingX;
+    }
+    &__text{
+        $paddingY: 5px;
+
+        display: inline-block;
+        width: 100%;
+        border-bottom: 1px solid;
+        border-bottom-color: $gainsboro;
+        transition: border-bottom-color $transitionMain;
+        padding-top: $paddingY;
+        padding-bottom: $paddingY;
+
+        @include placeholder{
+            color: rgba($black, .3);
+        }
+        
+        &:focus{
+            border-bottom-color: $mediumseagreen;
+        }
+    }
+}

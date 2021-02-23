@@ -1,0 +1,64 @@
+@import "./../../../../styles/components/index";
+
+.filters{
+    display: flex;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+.filter__item{
+    cursor: pointer;
+    border-radius: 1.5em;
+    border: 1px solid;
+    font-size: 12px;
+    border-color: currentColor;
+    background-color: transparent;
+    @include transition(border-color, color);
+    padding: 5px 10px;
+    margin-top: 10px;
+
+    &:not(:last-child){
+        margin-right: 20px;
+    }
+
+    &-default{
+        $color: $darkgray;
+
+        color: $color;
+        border-color: currentColor;
+
+        &:not(.filter__item-checked):hover{
+            color: darken($color, 15%);
+        }
+        &.filter__item-checked{
+            background-color: $color;
+        }
+    }
+    &-completed{
+        $color: $lightpink;
+
+        color: $color;
+
+        &:not(.filter__item-checked):hover{
+            color: darken($color, 15%);
+        }
+        &.filter__item-checked{
+            background-color: $color;
+        }
+    }
+    &-active{
+        $color: $mediumseagreen;
+
+        color: $color;
+
+        &:not(.filter__item-checked):hover{
+            color: darken($color, 15%);
+        }
+        &.filter__item-checked{
+            background-color: $color;
+        }
+    }
+
+    &-checked{
+        color: $white;
+    }
+}

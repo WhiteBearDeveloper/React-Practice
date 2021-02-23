@@ -1,0 +1,22 @@
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+@mixin transition($transitions...){
+    $transition_result: ();
+    @each $transition in $transitions {
+        $transition_result: append($transition_result, $transition $transitionMain, comma);
+    }
+    transition: $transition_result;
+}

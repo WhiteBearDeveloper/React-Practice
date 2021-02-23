@@ -1,0 +1,11 @@
+@import "../../../../styles/components/index";
+
+.header{
+    $paddingY: 20px;
+
+    border-bottom: 1px solid;
+    background: $white;
+    border-bottom-color: $gainsboro;
+    padding-top: $paddingY;
+    padding-bottom: $paddingY;
+}
